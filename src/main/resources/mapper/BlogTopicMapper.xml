@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.liteblog.mapper.BlogTopicMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.liteblog.domain.BlogTopic">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="gmt_create" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmt_modified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="community_count" column="community_count" jdbcType="INTEGER"/>
+            <result property="creator_id" column="creator_id" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="OTHER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,gmt_create,
+        gmt_modified,description,community_count,
+        creator_id,status
+    </sql>
+</mapper>
